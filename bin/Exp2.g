@@ -32,20 +32,20 @@ unite  :    exp {System.out.println("fin analyse syntaxique");}  EOF
   ;
   
 exp   : (terme) 
-        ('+' terme  
-        |'-' terme  
+        ('+' terme  {PtGen2.pt(1);}
+        |'-' terme  {PtGen2.pt(2);}
         )*
   ;
   
 terme  : (primaire) 
-        ( '*'  primaire  
-        | 'div' primaire  
+        ( '*'  primaire  {PtGen2.pt(3);}
+        | 'div' primaire  {PtGen2.pt(4);}
         )*
   ;
   
-primaire: nbentier 
-  | ident 
-  | '(' exp ')'
+primaire: nbentier {PtGen2.pt(5);}
+  | ident {PtGen2.pt(6);}
+  | '(' {PtGen2.pt(7);} exp ')'{PtGen2.pt(8);}
   ;
 
 // partie lexicale  //

@@ -28,7 +28,30 @@ public class PtGen2 {
 		switch (numGen) {
 		case 0:
 			break;
-		// ... à compléter
+		case 1:
+			System.out.println("+");
+			break;
+		case 2:
+			System.out.println("-");
+			break;
+		case 3:
+			System.out.println("*");
+			break;
+		case 4:
+			System.out.println("div");
+			break;
+		case 5:
+			System.out.println(valNb);
+			break;
+		case 6:
+			System.out.println(idLu);
+			break;
+		case 7:
+			System.out.println("(");
+			break;
+		case 8:
+			System.out.println(")");
+			break;
 
 		default:
 			System.out.println("Point de génération non prévu dans votre liste");
