@@ -1,4 +1,4 @@
-// $ANTLR 3.5.2 Exp2.g 2018-02-08 17:47:13
+// $ANTLR 3.5.2 Exp2.g 2018-02-08 18:07:43
            
 import java.io.IOException;
 import java.io.DataInputStream;
@@ -109,22 +109,22 @@ public class Exp2Parser extends Parser {
 					// Exp2.g:35:10: '+' terme
 					{
 					match(input,10,FOLLOW_10_in_exp98); 
-					pushFollow(FOLLOW_terme_in_exp100);
+					PtGen2.pt(1);
+					pushFollow(FOLLOW_terme_in_exp103);
 					terme();
 					state._fsp--;
 
-					PtGen2.pt(1);
 					}
 					break;
 				case 2 :
 					// Exp2.g:36:10: '-' terme
 					{
 					match(input,11,FOLLOW_11_in_exp114); 
-					pushFollow(FOLLOW_terme_in_exp116);
+					PtGen2.pt(2);
+					pushFollow(FOLLOW_terme_in_exp118);
 					terme();
 					state._fsp--;
 
-					PtGen2.pt(2);
 					}
 					break;
 
@@ -156,7 +156,7 @@ public class Exp2Parser extends Parser {
 			// Exp2.g:40:10: ( primaire )
 			// Exp2.g:40:11: primaire
 			{
-			pushFollow(FOLLOW_primaire_in_terme145);
+			pushFollow(FOLLOW_primaire_in_terme144);
 			primaire();
 			state._fsp--;
 
@@ -178,23 +178,23 @@ public class Exp2Parser extends Parser {
 				case 1 :
 					// Exp2.g:41:11: '*' primaire
 					{
-					match(input,9,FOLLOW_9_in_terme159); 
+					match(input,9,FOLLOW_9_in_terme158); 
+					PtGen2.pt(3);
 					pushFollow(FOLLOW_primaire_in_terme162);
 					primaire();
 					state._fsp--;
 
-					PtGen2.pt(3);
 					}
 					break;
 				case 2 :
 					// Exp2.g:42:11: 'div' primaire
 					{
-					match(input,12,FOLLOW_12_in_terme177); 
+					match(input,12,FOLLOW_12_in_terme175); 
+					PtGen2.pt(4);
 					pushFollow(FOLLOW_primaire_in_terme179);
 					primaire();
 					state._fsp--;
 
-					PtGen2.pt(4);
 					}
 					break;
 
@@ -247,7 +247,7 @@ public class Exp2Parser extends Parser {
 				case 1 :
 					// Exp2.g:46:11: nbentier
 					{
-					pushFollow(FOLLOW_nbentier_in_primaire205);
+					pushFollow(FOLLOW_nbentier_in_primaire202);
 					nbentier();
 					state._fsp--;
 
@@ -257,7 +257,7 @@ public class Exp2Parser extends Parser {
 				case 2 :
 					// Exp2.g:47:5: ident
 					{
-					pushFollow(FOLLOW_ident_in_primaire213);
+					pushFollow(FOLLOW_ident_in_primaire210);
 					ident();
 					state._fsp--;
 
@@ -267,13 +267,13 @@ public class Exp2Parser extends Parser {
 				case 3 :
 					// Exp2.g:48:5: '(' exp ')'
 					{
-					match(input,7,FOLLOW_7_in_primaire221); 
+					match(input,7,FOLLOW_7_in_primaire218); 
 					PtGen2.pt(7);
-					pushFollow(FOLLOW_exp_in_primaire225);
+					pushFollow(FOLLOW_exp_in_primaire222);
 					exp();
 					state._fsp--;
 
-					match(input,8,FOLLOW_8_in_primaire227); 
+					match(input,8,FOLLOW_8_in_primaire224); 
 					PtGen2.pt(8);
 					}
 					break;
@@ -299,7 +299,7 @@ public class Exp2Parser extends Parser {
 			// Exp2.g:56:11: ( INT )
 			// Exp2.g:56:15: INT
 			{
-			INT1=(Token)match(input,INT,FOLLOW_INT_in_nbentier254); 
+			INT1=(Token)match(input,INT,FOLLOW_INT_in_nbentier251); 
 			 PtGen2.valNb = Integer.parseInt((INT1!=null?INT1.getText():null));
 			}
 
@@ -323,7 +323,7 @@ public class Exp2Parser extends Parser {
 			// Exp2.g:57:7: ( ID )
 			// Exp2.g:57:9: ID
 			{
-			ID2=(Token)match(input,ID,FOLLOW_ID_in_ident263); 
+			ID2=(Token)match(input,ID,FOLLOW_ID_in_ident260); 
 			 PtGen2.idLu = (ID2!=null?ID2.getText():null); 
 			}
 
@@ -344,19 +344,19 @@ public class Exp2Parser extends Parser {
 	public static final BitSet FOLLOW_EOF_in_unite69 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_terme_in_exp85 = new BitSet(new long[]{0x0000000000000C02L});
 	public static final BitSet FOLLOW_10_in_exp98 = new BitSet(new long[]{0x00000000000000B0L});
-	public static final BitSet FOLLOW_terme_in_exp100 = new BitSet(new long[]{0x0000000000000C02L});
+	public static final BitSet FOLLOW_terme_in_exp103 = new BitSet(new long[]{0x0000000000000C02L});
 	public static final BitSet FOLLOW_11_in_exp114 = new BitSet(new long[]{0x00000000000000B0L});
-	public static final BitSet FOLLOW_terme_in_exp116 = new BitSet(new long[]{0x0000000000000C02L});
-	public static final BitSet FOLLOW_primaire_in_terme145 = new BitSet(new long[]{0x0000000000001202L});
-	public static final BitSet FOLLOW_9_in_terme159 = new BitSet(new long[]{0x00000000000000B0L});
+	public static final BitSet FOLLOW_terme_in_exp118 = new BitSet(new long[]{0x0000000000000C02L});
+	public static final BitSet FOLLOW_primaire_in_terme144 = new BitSet(new long[]{0x0000000000001202L});
+	public static final BitSet FOLLOW_9_in_terme158 = new BitSet(new long[]{0x00000000000000B0L});
 	public static final BitSet FOLLOW_primaire_in_terme162 = new BitSet(new long[]{0x0000000000001202L});
-	public static final BitSet FOLLOW_12_in_terme177 = new BitSet(new long[]{0x00000000000000B0L});
+	public static final BitSet FOLLOW_12_in_terme175 = new BitSet(new long[]{0x00000000000000B0L});
 	public static final BitSet FOLLOW_primaire_in_terme179 = new BitSet(new long[]{0x0000000000001202L});
-	public static final BitSet FOLLOW_nbentier_in_primaire205 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ident_in_primaire213 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_7_in_primaire221 = new BitSet(new long[]{0x00000000000000B0L});
-	public static final BitSet FOLLOW_exp_in_primaire225 = new BitSet(new long[]{0x0000000000000100L});
-	public static final BitSet FOLLOW_8_in_primaire227 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_INT_in_nbentier254 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ID_in_ident263 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_nbentier_in_primaire202 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ident_in_primaire210 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_7_in_primaire218 = new BitSet(new long[]{0x00000000000000B0L});
+	public static final BitSet FOLLOW_exp_in_primaire222 = new BitSet(new long[]{0x0000000000000100L});
+	public static final BitSet FOLLOW_8_in_primaire224 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_INT_in_nbentier251 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ID_in_ident260 = new BitSet(new long[]{0x0000000000000002L});
 }

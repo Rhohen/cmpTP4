@@ -32,14 +32,14 @@ unite  :    exp {System.out.println("fin analyse syntaxique");}  EOF
   ;
   
 exp   : (terme) 
-        ('+' terme  {PtGen2.pt(1);}
-        |'-' terme  {PtGen2.pt(2);}
+        ('+'  {PtGen2.pt(1);} terme
+        |'-' {PtGen2.pt(2);} terme
         )*
   ;
   
 terme  : (primaire) 
-        ( '*'  primaire  {PtGen2.pt(3);}
-        | 'div' primaire  {PtGen2.pt(4);}
+        ( '*' {PtGen2.pt(3);} primaire 
+        | 'div' {PtGen2.pt(4);} primaire
         )*
   ;
   
